@@ -1,0 +1,90 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Fredboxer</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Fredboxer</a>
+      </div>
+      <div class="navbar-collapse collapse">
+      </div><!--/.navbar-collapse -->
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Fredboxer</h1>
+      <p>Crowdsourced party playlists</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>1. Create your Fredbox</h2>
+        <p>Choose a great name, click the button and after just a minute you're on your way.</p>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="awesome-playlist-name"></input>
+          </div>
+          <button type="submit" type="text" class="btn btn-primary" button-loading-text="Loading...">Create!</button>
+        </form>
+        {{> creator}}
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>2. Share your Fredbox</h2>
+        <p>After the playlist is created, share the link with everyone! Encourage your guests to submit and upvote songs they like.</p>
+        <p><a id="qr" class="btn btn-default" href="#">Get a shareable QR code</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>3. Connect to Spotify</h2>
+        <p>Download the Fredbox spotify app and install it to make the most out of your Fredbox.</p>
+        <p><a class="btn btn-default" href="https://s3-eu-west-1.amazonaws.com/julio-playarea/fredbox.zip">Download</a></p>
+        <p>Installation instructions (Mac OS):</p>
+        <ol>
+          <li>Download the zip file</li>
+          <li>If it doesn't exist, create a <strong>Spotify</strong> folder in your home folder.</li>
+          <li>Extract the zip file into the folder</li>
+          <li>Enter <strong>spotify:app:fredbox</strong> into Spotify's search box.</li>
+          <li>When you're ready to party, enter the name of your playlist</li>
+        </ol>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">4. Party!</h2>
+        <p class="lead">Here's how you party the hardest.</p>
+        <p>Share your Fredbox with your party guests. Ask them to submit songs and upvote them. Then, as soon as your playlist is ready to roll and the party is about to start, open the Spotify app.</p>
+        <p>When you enter your playlist's name into Spotify, it will take the song at the top of the list and play it. Whenever a song is over, it will take whatever's at the top at the moment.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive" src="party.jpg">
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<template name="creator">
+  {{#if response}}
+    <p>
+      Your playlist in now live at <a href="http://{{response}}" target="_blank">{{response}}</a>
+    </p>
+    <p>
+    </p>
+  {{else}}
+    <strong>Be patient.</strong> Please allow up to 5 minutes for your playlist to be created.
+  {{/if}}
+</template>
+

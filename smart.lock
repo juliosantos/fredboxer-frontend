@@ -1,0 +1,21 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "bootstrap-cyborg": {},
+      "font-awesome": {}
+    },
+    "packages": {
+      "bootstrap-cyborg": {
+        "git": "https://github.com/and-fri/meteor-bootstrap-cyborg.git",
+        "tag": "v0.0.2",
+        "commit": "d066ef13555ff79ebf99eac058b9f1dc37442060"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.0.3",
+        "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      }
+    }
+  }
+}

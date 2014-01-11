@@ -1,0 +1,4 @@
+# vim files
+.*.sw?
+.DS_Store
+/server
